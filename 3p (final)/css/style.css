@@ -1,0 +1,277 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease-in;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --body-color: #dde6ff;
+  --nav-color: #fff;
+  --text-color: rgb(0, 0, 0);
+  --hover-color: rgb(0, 4, 255);
+  --span-color:rgb(98, 0, 255);
+
+}
+
+/* body {
+  height: 100vh;
+  background-color: var(--body-color);
+} */
+
+body.dark {
+  --body-color: #18191a;
+  --nav-color: #242526;
+  --text-color: #fff;
+  --hover-color: rgb(0, 255, 55);
+  --span-color:rgb(0, 204, 255);
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+}
+
+
+
+
+/* ******************************************************************* */
+
+
+nav .nav-bar{
+  position: relative;
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen{
+  color: var(--text-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-bar a span{
+  color: rgb(255, 0, 0);
+}
+
+nav .nav-bar a{
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.menu .logo-toggle{
+  display: none;
+}
+.nav-bar i{
+  margin-left: -20px;
+}
+
+
+.nav-bar .nav-links{
+  display: flex;
+  align-items: center;
+  padding-left: 290px;
+  
+}
+
+.nav-bar .nav-links li{
+  margin: 0 5px;
+  list-style: none;
+  
+}
+
+.nav-links li a{
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+  /* padding: 10px; */
+  margin: 10px;
+}
+
+.nav-links li a:hover {
+  color: var(--hover-color);
+  border-bottom: 2px solid var(--hover-color);
+  padding-bottom: 3px ; 
+  animation:  1s ease-in;
+
+  
+}
+.nav-bar .logo a:hover{
+  color: var(--hover-color);
+
+}
+.nav-bar .darkLight {
+  display: flex;
+  align-items: center;
+}
+
+.dark-light {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  
+}
+
+.dark-light i {
+  position: absolute;
+  color: var(--text-color);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-light i.fa-sun {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dark-light.active i.fa-sun {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dark-light.active i.fa-moon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* body starts */
+.home{
+  background-color: var(--body-color);
+  padding-top: 100px;
+}
+
+.container{
+  max-width: 1140px;
+  width: 90%;
+  margin: 0 auto;
+  height: 80vh;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.container span{
+  color: var(--span-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************* media queries *************************************/
+
+
+@media (max-width: 1030px) {
+  nav .nav-bar .sidebarOpen {
+    display: block;
+  }
+
+  
+.container1{
+  width: 90%;
+}
+
+.menu .nav-links{
+    margin-left: -30px;
+}
+
+
+
+  .menu {
+    position: fixed;
+    height: 100%;
+    width: 280px;
+    left: -110%;
+    top: 0;
+    padding: 20px;
+    background-color: var(--nav-color);
+    z-index: 100;
+    transition: all 0.4s ease;
+    color: var(--text-color);
+  }
+
+  nav.active .menu {
+    left: -0%;
+  }
+
+  nav.active .nav-bar .navLogo a {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu .logo-toggle {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose {
+    color: var(--search-textr);
+    font-size: 24px;
+    cursor: pointer;
+   
+  }
+
+  .nav-bar .nav-links {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .nav-links li a {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .nav-bar .nav-links{
+   
+    padding-left: 0px;
+    
+  }
+  .dark-light{
+    margin-right: -30px;
+  }
+  
+}
