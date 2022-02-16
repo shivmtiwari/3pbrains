@@ -197,7 +197,7 @@ nav .nav-bar a{
 .container1{
   max-width: 1140px;
   /* background-color: var(--body-color); */
-  width: 90%;
+  width: 100%;
   margin:   auto;
   height: auto;
   color: var(--text-color);
@@ -221,7 +221,7 @@ nav .nav-bar a{
 
 
 .container{
-  max-width: 1140px;
+  max-width: 1190px;
   width: 100%;
   overflow: hidden;
   padding: 50px 0;
@@ -452,7 +452,7 @@ input[type="radio"]{
 
   
 .container1{
-  width: 90%;
+  width: 100%;
 }
 
 .menu .nav-links{
@@ -526,6 +526,7 @@ input[type="radio"]{
   .main-card1 .cards .card1{
     margin: 20px 0 10px 0;
     width: calc(100% / 2 - 10px);
+    
   }
 }
 
@@ -534,7 +535,7 @@ input[type="radio"]{
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 20px  auto;
     width: 100%;
   }
   .main-card1 .cards .card1{
